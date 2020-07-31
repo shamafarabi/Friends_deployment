@@ -1,15 +1,6 @@
-# Starter for deploying [fast.ai](https://www.fast.ai) models on [Render](https://render.com)
+# Deploying NLP Model for Prediciting Cast Member in the TV show "Friends"(https://render.com)
 
-This repo can be used as a starting point to deploy [fast.ai](https://github.com/fastai/fastai) models on Render.
+This is a deployment of a multiclass text classification web app I developled using fastai. A user can input any line he\she wants from the transcripts of the tv show "Friends" and let the ML model guess the character. You can play with it (here.)[https://friends-2b3s.onrender.com/
+]
 
-The sample app described here is up at https://fastai-v3.onrender.com. Test it out with bear images!
-
-You can test your changes locally by installing Docker and using the following command:
-
-```
-docker build -t fastai-v3 . && docker run --rm -it -p 5000:5000 fastai-v3
-```
-
-The guide for production deployment to Render is at https://course.fast.ai/deployment_render.html.
-
-Please use [Render's fast.ai forum thread](https://forums.fast.ai/t/deployment-platform-render/33953) for questions and support.
+The data for this ML modeling was scraped from trasncripts available online.  An RNN based AWD LSTM Model pretrained on WikiTxt dataset was used as a language model and then fine tuned with the dataset for this project. The language model was then trained for building the classification model. 
